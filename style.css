@@ -1,220 +1,180 @@
+@font-face {
+    font-family: 'outfit';
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format(ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'outfit';
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format(ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'outfit';
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format(ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format(ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 body {
-    background-color: var(--html-clr);
-}
-
-p {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-}
-
-h1 {
-    font-family: var(--header-font-family-text);
-    font-size: 4rem;
-    font-weight: 400;
-    color: var(--para-color);
-    margin: 2rem 0;
-}
-
-h2 {
-    font-family: var(--header-font-family-text);
-    font-size: 2.8rem;
-    font-weight: 400;
-}
-
-:root {
-    --html-clr:hsl(30, 54%, 90%);
-    --card-bg-clr:hsl(0, 0%, 100%);
-    --ul-bg-clr:hsl(330, 100%, 98%);
-    --text-header: hsl(14, 45%, 36%);
-    --subtext-header:hsl(332, 51%, 32%);
-    --all-para-size: 1.6rem;
-    --para-font-400: 400;
-    --para-color:hsl(30, 10%, 34%);
-    --header-font-family-text:"Young Serif", serif;
-    --para-font-family-text:"Outfit", sans-serif;
+    background-color: var(--body-background-color);
+    display: flex;
+    height: 250vh;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
+    display: block;
+    object-fit: contain;
+    border-radius: 1rem;
+}
+
+section, img {
+    max-width: 36rem;
     width: 100%;
-    max-width: 75rem;
-    border-radius: 2rem;
-    
+    height: auto;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--card-bg-clr);
-    border: .1rem solid white;
-    border-radius: 2rem;
+section {
+    margin: 1rem 0;
 }
 
-.major-container {
-    display: grid;
-    margin: 3rem;
+h1 {
+    font-family: var(--h1-header-text-family);
+    font-size: 2.5rem;
+    margin: 1rem 0;
 }
 
-.section-container2 {
-    border-bottom: 1px solid rgb(193, 184, 184) ;
+h2 {
+    font-family: var(--h1-header-text-family);
+    color: var(--h2-font-color);
+    font-size: 1.5rem;
 }
 
-.section-head-text {
-    color: var(--text-header);
-    padding-top: 1rem;
+p {
+    font-family: var(--paragraph-text-family);
+    line-height: 1.2;
+    font-size: 1rem;
+    color: var(--paragraph-text-color);
 }
 
-.highligted-text-container {
-    background-color: var(--ul-bg-clr);
-    border-radius: 2rem;
-    padding-left: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+li {
+    font-family: var(--paragraph-text-family);
+    margin-left: 1rem;
+    padding: 0.5rem 0 0.5rem 1rem;
+    font-size: 1rem;
+    color: var(--paragraph-text-color);
 }
 
-.subtext-header {
-    color: var(--subtext-header);
-    font-family: var(--para-font-family-text);
-    font-size: 2rem;
-}
-
-p.value {
-    color: var(--text-header);
-    font-family: var(--para-font-family-text);
+span {
     font-weight: 600;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
 }
 
-.li2 {
+.list-info {
     padding-bottom: 1.5rem;
 }
 
-p.text {
-    color:var(--para-color);
-    font-family: var(--para-font-family-text);
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
+
+:root {
+    --card-background-color: hsl(0, 0%, 100%);
+    --body-background-color: hsl(30, 54%, 90%);
+    --h1-header-text-family: 'Young Serif';
+    --paragraph-text-family: 'outfit';
+    --paragraph-text-color:hsl(30, 10%, 34%);
+    --h2-font-color:hsl(14, 45%, 36%);
+    --mini-header-font-color:hsl(332, 51%, 32%);
+    --highlighted-box: hsl(330, 100%, 98%);
 }
 
-.table,.table2 {
+.wrapper {
+    padding: 2rem;
+    background-color: var(--card-background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.highlighted-box {
+    background-color: var(--highlighted-box);
+    padding-left: 1rem;
+    border-radius: 1rem;
+}
+
+.mini-header {
+    margin-bottom: 0.5rem;
+    color: var(--mini-header-font-color);
+    font-family: var(--paragraph-text-family);
+    font-size: 1.10rem;
+    font-weight: 700;
+}
+.mini-list {
+    margin-left: .5rem;
+}
+
+.content-container {
+    border-bottom: 1px solid rgb(227, 219, 219);
+    margin-bottom: 0;;
+}
+
+.Nutrition-subheader {
+    padding: 1rem 0;
+}
+.facts-1,.facts-2,.facts-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid rgb(227, 219, 219);
+}
+
+.facts-4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.table {
-    border-bottom: 1px solid rgb(193, 184, 184) ;
+.nutri-info,.nutri-value {
+    padding: 0.5rem 0 0.5rem 1rem;
 }
 
-/* experimental code below */
-
-li {
-    font-size: var(--all-para-size);
-    padding: 0.5rem 0;
-    font-family: var(--para-font-family-text);
-    color: var(--para-color);
+.nutri-value {
+    color: var(--h2-font-color);
+    font-weight: 600;
 }
 
-li::marker {
-    color: var(--text-header);
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width:600px) {
+    .wrapper {
+        padding: 1rem;
+    }
+
 }
 
-span {
-    font-weight: 700;
+@media (max-width:400px) {
+    .wrapper {
+        padding: .5rem;
+    }
+    img {
+        border-radius: 0;
+    }
+
 }
-
-ul {
-    padding-left: 3rem;
-}
-
-ol {
-    padding-left: 3rem;
-}
-
-@media screen and (max-width: 1330px) {
-    br {
-        display: none;
-    }
-    
-}
-
-@media screen and (max-width: 1060px) {
-    br {
-        display: none;
-    }
-
-    p, li {
-        font-size: 1.4rem;
-    }
-
-    .subtext-header {
-        font-size: 1.5rem;
-        margin-bottom: .5rem;
-    }
-
-    h1 {
-        font-size: 3.5rem;
-        margin: 1.5rem 0;
-    }
-
-    .section-head-text {
-        font-size: 2.4rem;
-    }
-
-    .major-container {
-        display: grid;
-        margin: 2rem;
-    }
-}
-
-@media screen and (max-width: 960px) {
-    br {
-        display: none;
-    }
-
-    p, li {
-        font-size: 1.3rem;
-    }
-
-    .li2 {
-        margin-bottom: 1rem;
-    }
-
-    .subtext-header {
-        font-size: 1.5rem;
-        margin-bottom: .5rem;
-    }
-
-    h1 {
-        font-size: 2.8rem;
-        margin: 1.5rem 0;
-    }
-
-    .section-head-text {
-        font-size: 2.0rem;
-    }
-
-    .major-container {
-        display: grid;
-        margin: 2rem;
-    }
-}
-
-
 
